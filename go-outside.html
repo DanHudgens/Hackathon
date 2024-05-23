@@ -7,9 +7,23 @@
       body {
         text-align: center;
       }
+      p {
+        width: 100%;
+        float: left;
+        background-color: red;
+      }
     </style>
   </head>
   <body>
+    <form id="myForm">
+      <label for="zipcode">Zip Code:</label><br />
+      <input type="text" id="zipcode" name="zipcode" /><br />
+      <label for="min-temp">Minimum Desired Temperature:</label><br />
+      <input type="text" id="min-temp" name="min-temp" /><br />
+      <label for="max-temp">Maximum Desired Temperature:</label><br />
+      <input type="text" id="max-temp" name="max-temp" /><br />
+      <input type="submit" value="Submit" /><br />
+    </form>
     <script src="./go-outside.js"></script>
   </body>
 </html>

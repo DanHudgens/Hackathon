@@ -4,40 +4,6 @@
   "description": "Base Level Extension",
   "version": "1.0",
   "action": {
-    "default_popup": "hello.html",
-    "default_icon": "hello_extensions.png"
-  }
-}
-
-
-//create some sort of entry form to get location from user
-//user specifies their desired conditions
-//if those conditions match the current weather 
-//have another popup that says go outside 
-
-//make it so that it only popups every so often
-
-//temperature
-//sunny/cloudy/rainy
-//wind
-
-{
-  "name": "Drink Water Event Popup",
-  "description": "Demonstrates usage and features of the event page by reminding user to drink water",
-  "version": "1.0",
-  "manifest_version": 3,
-  "permissions": ["alarms", "notifications", "storage"],
-  "background": {
-    "service_worker": "background.js"
-  },
-  "action": {
-    "default_title": "Drink Water Event",
-    "default_popup": "popup.html"
-  },
-  "icons": {
-    "16": "drink_water16.png",
-    "32": "drink_water32.png",
-    "48": "drink_water48.png",
-    "128": "drink_water128.png"
+    "default_popup": "go-outside.html"
   }
 }
