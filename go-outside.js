@@ -18,14 +18,10 @@ document.getElementById('myForm').addEventListener('submit', () => {
   for (const pair of formData.entries()) {
     ourData[pair[0]] = pair[1];
   }
-  // const zipCodeApi = apiCall(ourData.zipcode);
 
-  // const zipCodeApi = function (zip) {
-  //   return apiCall(ourData.zipcode)
-  // };
   //make call to api with user's zipcode
   apiCall(ourData.zipcode);
-  //setInterval(apiCall(ourData.zipcode), 900000);
+  setInterval(apiCall, 900000, ourData.zipcode);
 });
 
 function apiCall(zipcode) {
@@ -39,7 +35,7 @@ function apiCall(zipcode) {
     .then((data) => data.json()) // returns JS object
     .then((data) => {
       localTemp = (data.main.temp - 273.15) * 1.8 + 32; // calc F from K
-      // localRain = data.rain['1h'];
+      //localRain = data.rain;
       // localGust = data.wind.gust;
       //check to see if temp is within desired range from user //min-temp //max-temp
       if (
@@ -49,7 +45,7 @@ function apiCall(zipcode) {
         alert('Go Outside!');
       }
     })
-    .catch(() => {
-      alert('query failed');
+    .catch((error) => {
+      alert(error);
     });
 }
